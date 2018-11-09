@@ -1,20 +1,110 @@
-Started GET "/" for 127.0.0.1 at 2018-11-07 17:42:32 +0100
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (7.9ms)
-Completed 200 OK in 58ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (659.8ms)[0m  [1m[35mCREATE DATABASE "movie-searcher_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (421.2ms)[0m  [1m[35mCREATE DATABASE "movie-searcher_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (18.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (22.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(543868160475982440)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateMovies (20181108194222)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (32.2ms)[0m  [1m[35mCREATE TABLE "movies" ("id" bigserial primary key, "title" character varying, "director" character varying, "realease_date" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181108194222_create_movies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (3.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181108194222"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (5.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-08 21:37:53.358656"], ["updated_at", "2018-11-08 21:37:53.358656"]]
+  ↳ bin/rails:9
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(543868160475982440)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-11-08 22:38:10 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 642ms (Views: 626.2ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/" for 127.0.0.1 at 2018-11-07 17:42:39 +0100
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (4.4ms)
-Completed 200 OK in 18ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+Started POST "/movies/search" for 127.0.0.1 at 2018-11-08 22:38:23 +0100
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QfabDmAmd9ejYGx33C4k77apWT6hdAQYwm+IbRCSMUBU4wgdp80v2KaCw3aN6bxr8bDJjCLb41f6mPIdoDJKiQ==", "word"=>"Inception", "commit"=>"Submit"}
+Completed 500 Internal Server Error in 219ms (ActiveRecord: 0.0ms)
 
 
-Started GET "/index" for 127.0.0.1 at 2018-11-07 17:42:50 +0100
   
-ActionController::RoutingError (No route matches [GET] "/index"):
+Tmdb::InvalidApiKeyError (Tmdb::InvalidApiKeyError):
+  
+app/services/search_movie.rb:15:in `perform'
+app/controllers/movies_controller.rb:8:in `create'
+Started GET "/" for 127.0.0.1 at 2018-11-08 22:50:39 +0100
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 380ms (Views: 364.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies/search" for 127.0.0.1 at 2018-11-08 22:50:52 +0100
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ARreMzGMvOLZn+u3Ngxj3bZxOUBIVj2kJS+yJC6MmmEUD00g9mfk7dx9RLZny/tZ8Wip8sv52usd2MhUnizhqA==", "word"=>"Inception", "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (13.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception"], ["realease_date", "2010-07-15"], ["created_at", "2018-11-08 21:50:52.969358"], ["updated_at", "2018-11-08 21:50:52.969358"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (11.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception: The Cobol Job"], ["realease_date", "2010-12-07"], ["created_at", "2018-11-08 21:50:53.202392"], ["updated_at", "2018-11-08 21:50:53.202392"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Bikini Inception"], ["realease_date", "2015-05-19"], ["created_at", "2018-11-08 21:50:53.440340"], ["updated_at", "2018-11-08 21:50:53.440340"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "WWA The Inception"], ["realease_date", "2001-10-26"], ["created_at", "2018-11-08 21:50:53.686453"], ["updated_at", "2018-11-08 21:50:53.686453"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "The Inception of Dramatic Representation"], ["created_at", "2018-11-08 21:50:53.915170"], ["updated_at", "2018-11-08 21:50:53.915170"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  Rendering movies/search.html.erb within layouts/application
+  [1m[36mMovie Load (25.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE (title ILIKE '%Inception%')[0m
+  ↳ app/views/movies/search.html.erb:12
+  Rendered movies/search.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 1869ms (Views: 46.5ms | ActiveRecord: 71.4ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&title=Inception&commit=Search" for 127.0.0.1 at 2018-11-08 23:44:55 +0100
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/search"):
   
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -43,162 +133,436 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
-Started GET "/movies/index" for 127.0.0.1 at 2018-11-07 17:43:06 +0100
-Processing by MoviesController#index as HTML
-  Rendering movies/index.html.erb within layouts/application
-  Rendered movies/index.html.erb within layouts/application (1.3ms)
-Completed 200 OK in 768ms (Views: 761.4ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-11-08 23:45:12 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 530ms (Views: 525.3ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/movies/index" for 127.0.0.1 at 2018-11-07 17:44:48 +0100
-Processing by MoviesController#index as HTML
-  Rendering movies/index.html.erb within layouts/application
-  Rendered movies/index.html.erb within layouts/application (1.0ms)
-Completed 200 OK in 582ms (Views: 576.2ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-11-08 23:48:00 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 61ms (Views: 55.9ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/movies/index" for 127.0.0.1 at 2018-11-07 17:58:25 +0100
-Processing by MoviesController#index as HTML
-  Rendering movies/index.html.erb within layouts/application
-  Rendered movies/index.html.erb within layouts/application (2.9ms)
-Completed 200 OK in 8124ms (Views: 8112.7ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-11-08 23:49:05 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.4ms)
+  Rendered movies/_home.html.erb (1.3ms)
+Completed 200 OK in 54ms (Views: 48.2ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/movies/index" for 127.0.0.1 at 2018-11-07 18:00:25 +0100
-Processing by MoviesController#index as HTML
-  Rendering movies/index.html.erb within layouts/application
-  Rendered movies/index.html.erb within layouts/application (0.7ms)
-Completed 200 OK in 144ms (Views: 139.1ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/movies/index" for 127.0.0.1 at 2018-11-07 18:00:27 +0100
-Processing by MoviesController#index as HTML
-  Rendering movies/index.html.erb within layouts/application
-  Rendered movies/index.html.erb within layouts/application (0.7ms)
-Completed 200 OK in 67ms (Views: 60.8ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/movies/index" for 127.0.0.1 at 2018-11-07 18:04:28 +0100
-Processing by MoviesController#index as HTML
-  Rendering movies/index.html.erb within layouts/application
-  Rendered movies/index.html.erb within layouts/application (5.4ms)
-Completed 500 Internal Server Error in 477ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-11-08 23:54:51 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
 
 
   
-ActionView::Template::Error (Undefined variable: "$line-height-base".):
-     5:     <%= csrf_meta_tags %>
-     6:     <%= csp_meta_tag %>
-     7: 
-     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    10:   </head>
-    11: 
+SyntaxError (/Users/elodieletellier/thp/rails_folder/movie/app/views/layouts/application.html.erb:11: syntax error, unexpected tLABEL
+...@output_buffer.append=(  https://stackpath.bootstrapcdn.com/...
+...                         ^~~~~~
+/Users/elodieletellier/thp/rails_folder/movie/app/views/layouts/application.html.erb:11: unknown regexp options - tackpath
+/Users/elodieletellier/thp/rails_folder/movie/app/views/layouts/application.html.erb:11: unexpected fraction part after numeric literal
+....bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css );@o...
+...                            ^~~
+/Users/elodieletellier/thp/rails_folder/movie/app/views/layouts/application.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...trapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css );@output_...
+...                            ^~~
+/Users/elodieletellier/thp/rails_folder/movie/app/views/layouts/application.html.erb:12: syntax error, unexpected tLABEL
+...@output_buffer.append=(  https://stackpath.bootstrapcdn.com/...
+...                         ^~~~~~
+/Users/elodieletellier/thp/rails_folder/movie/app/views/layouts/application.html.erb:12: unknown regexp options - tackpath
+/Users/elodieletellier/thp/rails_folder/movie/app/views/layouts/application.html.erb:12: unexpected fraction part after numeric literal
+....bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js );@out...
+...                            ^~~
+/Users/elodieletellier/thp/rails_folder/movie/app/views/layouts/application.html.erb:12: syntax error, unexpected tIDENTIFIER, expecting ')'
+...strapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js );@output_b...
+...                             ^~
+/Users/elodieletellier/thp/rails_folder/movie/app/views/layouts/application.html.erb:13: syntax error, unexpected tLABEL
+...@output_buffer.append=(  https://stackpath.bootstrapcdn.com/...
+...                         ^~~~~~
+/Users/elodieletellier/thp/rails_folder/movie/app/views/layouts/application.html.erb:13: unknown regexp options - tackpath
+/Users/elodieletellier/thp/rails_folder/movie/app/views/layouts/application.html.erb:13: unexpected fraction part after numeric literal
+....bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js...
+...                            ^~~
+/Users/elodieletellier/thp/rails_folder/movie/app/views/layouts/application.html.erb:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+...strapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js );@o...
+...                             ^~):
   
-app/assets/stylesheets/_custom-forms.scss:13
-app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___2600556096792129191_70252491752580'
-Started GET "/movies/index" for 127.0.0.1 at 2018-11-07 18:05:10 +0100
-Processing by MoviesController#index as HTML
-  Rendering movies/index.html.erb within layouts/application
-  Rendered movies/index.html.erb within layouts/application (0.7ms)
-Completed 500 Internal Server Error in 77ms (ActiveRecord: 0.0ms)
-
-
-  
-ActionView::Template::Error (Undefined variable: "$line-height-base".):
-     5:     <%= csrf_meta_tags %>
-     6:     <%= csp_meta_tag %>
-     7: 
-     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    10:   </head>
-    11: 
-  
-app/assets/stylesheets/_custom-forms.scss:13
-app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___2600556096792129191_70252513256160'
-Started GET "/movies/index" for 127.0.0.1 at 2018-11-07 18:06:22 +0100
-Processing by MoviesController#index as HTML
-  Rendering movies/index.html.erb within layouts/application
-  Rendered movies/index.html.erb within layouts/application (0.6ms)
-Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms)
-
-
-  
-ActionView::Template::Error (Undefined variable: "$line-height-base".):
-     5:     <%= csrf_meta_tags %>
-     6:     <%= csp_meta_tag %>
-     7: 
-     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    10:   </head>
-    11:   <header>
-  
-app/assets/stylesheets/_custom-forms.scss:13
-app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___2600556096792129191_70252483811320'
-Started GET "/movies/index" for 127.0.0.1 at 2018-11-07 18:09:37 +0100
-Processing by MoviesController#index as HTML
-  Rendering movies/index.html.erb within layouts/application
-  Rendered movies/index.html.erb within layouts/application (0.8ms)
-Completed 200 OK in 112ms (Views: 107.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/movies/index" for 127.0.0.1 at 2018-11-07 18:20:12 +0100
-Processing by MoviesController#index as HTML
-  Rendering movies/index.html.erb within layouts/application
-  Rendered movies/index.html.erb within layouts/application (2.6ms)
-Completed 500 Internal Server Error in 71ms (ActiveRecord: 0.0ms)
+app/views/layouts/application.html.erb:11: syntax error, unexpected tLABEL
+app/views/layouts/application.html.erb:11: unknown regexp options - tackpath
+app/views/layouts/application.html.erb:11: unexpected fraction part after numeric literal
+app/views/layouts/application.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:12: syntax error, unexpected tLABEL
+app/views/layouts/application.html.erb:12: unknown regexp options - tackpath
+app/views/layouts/application.html.erb:12: unexpected fraction part after numeric literal
+app/views/layouts/application.html.erb:12: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:13: syntax error, unexpected tLABEL
+app/views/layouts/application.html.erb:13: unknown regexp options - tackpath
+app/views/layouts/application.html.erb:13: unexpected fraction part after numeric literal
+app/views/layouts/application.html.erb:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-11-08 23:56:51 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms)
 
 
   
-ActionView::Template::Error (couldn't find file 'bootstrap.min.js' with type 'application/javascript'
-Checked in these paths: 
-  /Users/elodieletellier/thp/rails_folder/Hello_Movies/app/assets/config
-  /Users/elodieletellier/thp/rails_folder/Hello_Movies/app/assets/images
-  /Users/elodieletellier/thp/rails_folder/Hello_Movies/app/assets/javascripts
-  /Users/elodieletellier/thp/rails_folder/Hello_Movies/app/assets/stylesheets
-  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
-  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/actioncable-5.2.1/lib/assets/compiled
-  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/activestorage-5.2.1/app/assets/javascripts
-  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/actionview-5.2.1/lib/assets/compiled
-  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/turbolinks-source-5.2.0/lib/assets/javascripts
-  /Users/elodieletellier/thp/rails_folder/Hello_Movies/node_modules):
-     6:     <%= csp_meta_tag %>
-     7: 
-     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    10:   </head>
-    11:   <header>
-    12:     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+ActionView::Template::Error (The asset "bootstrap.min.css" is not present in the asset pipeline.):
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:     <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:300,400,700", media: 'screen'%>
+    10:     <%= stylesheet_link_tag "bootstrap.min.css"%>
+    11:     <%= stylesheet_link_tag "font-awesome.min.css"%>
+    12:     <%= stylesheet_link_tag "bootstrap-theme.css", media: 'screen'%>
+    13:     <%= stylesheet_link_tag "main.css"%>
   
-app/assets/javascripts/application.js:18
-app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___2600556096792129191_70252524982120'
-Started GET "/movies/index" for 127.0.0.1 at 2018-11-07 18:22:47 +0100
-Processing by MoviesController#index as HTML
-  Rendering movies/index.html.erb within layouts/application
-  Rendered movies/index.html.erb within layouts/application (1.1ms)
-Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms)
+app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb___2637049792123825900_70365036744300'
+Started GET "/" for 127.0.0.1 at 2018-11-08 23:58:23 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 265ms (ActiveRecord: 0.0ms)
 
 
   
-ActionView::Template::Error (couldn't find file 'bootstrap.min.js' with type 'application/javascript'
-Checked in these paths: 
-  /Users/elodieletellier/thp/rails_folder/Hello_Movies/app/assets/config
-  /Users/elodieletellier/thp/rails_folder/Hello_Movies/app/assets/images
-  /Users/elodieletellier/thp/rails_folder/Hello_Movies/app/assets/javascripts
-  /Users/elodieletellier/thp/rails_folder/Hello_Movies/app/assets/stylesheets
-  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
-  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/actioncable-5.2.1/lib/assets/compiled
-  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/activestorage-5.2.1/app/assets/javascripts
-  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/actionview-5.2.1/lib/assets/compiled
-  /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/turbolinks-source-5.2.0/lib/assets/javascripts
-  /Users/elodieletellier/thp/rails_folder/Hello_Movies/node_modules):
-     6:     <%= csp_meta_tag %>
-     7: 
-     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    10:   </head>
-    11:   <header>
-    12:   
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( bootstrap.min.css )` to `config/initializers/assets.rb` and restart your server):
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:     <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:300,400,700", media: 'screen'%>
+    10:     <%= stylesheet_link_tag "bootstrap.min.css"%>
+    11:     <%= stylesheet_link_tag "font-awesome.min.css"%>
+    12:     <%= stylesheet_link_tag "bootstrap-theme.css", media: 'screen'%>
+    13:     <%= stylesheet_link_tag "main.css"%>
   
-app/assets/javascripts/application.js:18
-app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___2600556096792129191_70252519779940'
+app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb___2637049792123825900_70365063284700'
+Started GET "/" for 127.0.0.1 at 2018-11-08 23:58:27 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( bootstrap.min.css )` to `config/initializers/assets.rb` and restart your server):
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:     <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:300,400,700", media: 'screen'%>
+    10:     <%= stylesheet_link_tag "bootstrap.min.css"%>
+    11:     <%= stylesheet_link_tag "font-awesome.min.css"%>
+    12:     <%= stylesheet_link_tag "bootstrap-theme.css", media: 'screen'%>
+    13:     <%= stylesheet_link_tag "main.css"%>
+  
+app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb___2637049792123825900_70365062021800'
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:01:12 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.0ms)
+  Rendered movies/_home.html.erb (1.5ms)
+Completed 200 OK in 79ms (Views: 72.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:02:40 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.4ms)
+  Rendered movies/_home.html.erb (0.8ms)
+Completed 200 OK in 76ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:03:37 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.2ms)
+  Rendered movies/_home.html.erb (3.2ms)
+Completed 200 OK in 97ms (Views: 91.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:05:27 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.1ms)
+  Rendered movies/_home.html.erb (0.9ms)
+Completed 200 OK in 71ms (Views: 67.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:21:22 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (10.4ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/elodieletellier/thp/rails_folder/movie/app/views/movies/search.html.erb:8: syntax error, unexpected ',', expecting ')'
+....append=( submit_tag("Search"), class="btn btn-dark" );@outp...
+...                              ^):
+  
+app/views/movies/search.html.erb:8: syntax error, unexpected ',', expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:22:22 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (4.1ms)
+  Rendered movies/_home.html.erb (1.7ms)
+Completed 200 OK in 147ms (Views: 142.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:24:21 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.2ms)
+  Rendered movies/_home.html.erb (1.7ms)
+Completed 200 OK in 83ms (Views: 77.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:25:46 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.6ms)
+  Rendered movies/_home.html.erb (1.0ms)
+Completed 200 OK in 84ms (Views: 78.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:29:49 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.9ms)
+  Rendered movies/_home.html.erb (1.1ms)
+Completed 200 OK in 74ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:30:25 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.8ms)
+  Rendered movies/_home.html.erb (1.1ms)
+Completed 200 OK in 81ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:30:43 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.3ms)
+  Rendered movies/_home.html.erb (1.6ms)
+Completed 200 OK in 74ms (Views: 69.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:31:10 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.8ms)
+  Rendered movies/_home.html.erb (1.1ms)
+Completed 200 OK in 82ms (Views: 76.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:32:20 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.0ms)
+  Rendered movies/_home.html.erb (1.0ms)
+Completed 200 OK in 83ms (Views: 79.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:32:50 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.7ms)
+  Rendered movies/_home.html.erb (0.7ms)
+Completed 200 OK in 86ms (Views: 81.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:33:32 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.9ms)
+  Rendered movies/_home.html.erb (0.5ms)
+Completed 200 OK in 326ms (Views: 321.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:34:25 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.1ms)
+  Rendered movies/_home.html.erb (0.6ms)
+Completed 200 OK in 130ms (Views: 125.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:35:10 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.6ms)
+  Rendered movies/_home.html.erb (0.4ms)
+Completed 200 OK in 164ms (Views: 158.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:35:36 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.7ms)
+  Rendered movies/_home.html.erb (0.7ms)
+Completed 200 OK in 86ms (Views: 80.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:35:52 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.8ms)
+  Rendered movies/_home.html.erb (0.7ms)
+Completed 200 OK in 92ms (Views: 86.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:36:28 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.8ms)
+  Rendered movies/_home.html.erb (0.4ms)
+Completed 200 OK in 92ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies/search" for 127.0.0.1 at 2018-11-09 00:36:44 +0100
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DgRdFa7wswtJi9SjzsYxZkDQ2indmlRROfEeNZDh7pobEc4GaRvrBExpe6KfAaniB8lKm141sx4BBmRFIEGVUw==", "word"=>"Inception"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (7.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception"], ["realease_date", "2010-07-15"], ["created_at", "2018-11-08 23:36:45.429542"], ["updated_at", "2018-11-08 23:36:45.429542"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (12.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception: The Cobol Job"], ["realease_date", "2010-12-07"], ["created_at", "2018-11-08 23:36:45.736230"], ["updated_at", "2018-11-08 23:36:45.736230"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Bikini Inception"], ["realease_date", "2015-05-19"], ["created_at", "2018-11-08 23:36:46.031660"], ["updated_at", "2018-11-08 23:36:46.031660"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "WWA The Inception"], ["realease_date", "2001-10-26"], ["created_at", "2018-11-08 23:36:46.235786"], ["updated_at", "2018-11-08 23:36:46.235786"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "The Inception of Dramatic Representation"], ["created_at", "2018-11-08 23:36:46.461937"], ["updated_at", "2018-11-08 23:36:46.461937"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  Rendering movies/search.html.erb within layouts/application
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE (title ILIKE '%Inception%')[0m
+  ↳ app/views/movies/search.html.erb:12
+  Rendered movies/search.html.erb within layouts/application (15.4ms)
+  Rendered movies/_home.html.erb (0.4ms)
+Completed 200 OK in 1960ms (Views: 66.2ms | ActiveRecord: 42.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:37:14 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (5.6ms)
+  Rendered movies/_home.html.erb (0.6ms)
+Completed 200 OK in 94ms (Views: 90.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:38:18 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.1ms)
+  Rendered movies/_home.html.erb (0.4ms)
+Completed 200 OK in 90ms (Views: 84.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:38:28 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.7ms)
+  Rendered movies/_home.html.erb (0.4ms)
+Completed 200 OK in 84ms (Views: 78.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:42:30 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.2ms)
+  Rendered movies/_home.html.erb (0.4ms)
+Completed 200 OK in 69ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:45:22 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.0ms)
+  Rendered movies/_home.html.erb (0.6ms)
+Completed 200 OK in 128ms (Views: 122.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:46:03 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.9ms)
+  Rendered movies/_home.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:46:24 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.9ms)
+  Rendered movies/_home.html.erb (0.5ms)
+Completed 200 OK in 84ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:46:40 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.8ms)
+  Rendered movies/_home.html.erb (0.5ms)
+Completed 200 OK in 71ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:47:00 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.0ms)
+  Rendered movies/_home.html.erb (0.4ms)
+Completed 200 OK in 69ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:47:21 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.1ms)
+  Rendered movies/_home.html.erb (1.0ms)
+Completed 200 OK in 72ms (Views: 67.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:55:45 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.6ms)
+  Rendered movies/_header.html.erb (0.4ms)
+  Rendered movies/_footer.html.erb (0.5ms)
+Completed 200 OK in 154ms (Views: 148.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 00:59:02 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.6ms)
+  Rendered movies/_header.html.erb (0.4ms)
+  Rendered movies/_footer.html.erb (0.3ms)
+Completed 200 OK in 67ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+

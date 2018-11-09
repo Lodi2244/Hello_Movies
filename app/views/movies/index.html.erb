@@ -1,2 +1,16 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+<div class="jumbotron top-space">
+  <div class="container">
+
+    <h3 class="text-center thin">Choisis ton flim :</h3>
+
+    <div class="text-center thin">
+      <!-- Insert du service ICI  -->
+      <%= form_for(:request, url: search_path) do |f| %>
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+          <%= f.submit "Keki Ya A Voir ?", class: "btn btn-primary" %>
+         <% end %>
+    </div> <!-- /row  -->
+
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="jumbotron top-space">
+  <div class="container">
+
+    <h3 class="text-center thin">Choose your movie : </h3>
+
+    <div class="text-center thin">
+
+      <table class="table table-striped">
+          <tr>
+            <th></th>
+            <th>Title</th>
+            <th>Release date</th>
+            <th>Director</th>
+            <th></th>
+            <th></th>
+          </tr>
+
+<%= form_tag("/movies/search", method: "post") do %>
+<div class="form-group" placeholder="Avatar">
+  <%= text_field_tag :word %>
+  <br>
+    <button type="submit" class="btn btn-dark">Search</button>
+      </div>
+<% end %>
+
+<% if @movies %>
+  <% @movies.each do |f| %>
+    <p>
+    	<p> titre du film : <%= f.title %></p>
+        <p> Réalisateur : <%= f.director %></p>
+       <p> Date de sortie: <%= f.realease_date %> </p>
+       </br>
+    </p>
+  <% end %>
+<% end %>

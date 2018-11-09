@@ -13,5 +13,3 @@
  *= require_tree .
  *= require_self
  */
-*= require bootstrap-theme.min.css
-*= require bootstrap.min.css
