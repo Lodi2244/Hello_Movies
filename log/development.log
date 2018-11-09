@@ -566,3 +566,1489 @@ Processing by MoviesController#search as HTML
 Completed 200 OK in 67ms (Views: 62.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-11-09 01:57:49 +0100
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (11.3ms)
+  Rendered movies/_header.html.erb (0.6ms)
+Completed 500 Internal Server Error in 584ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial movies/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/elodieletellier/thp/rails_folder/Hello_Movies/app/views"
+):
+    22: 
+    23:   </body>
+    24:   <footer>
+    25:     <%= render 'movies/footer' %>
+    26:   </footer>
+    27: </html>
+  
+app/views/layouts/application.html.erb:25:in `_app_views_layouts_application_html_erb__2962635042492277699_70180819247960'
+Started GET "/" for 127.0.0.1 at 2018-11-09 01:58:20 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.8ms)
+  Rendered movies/_header.html.erb (0.6ms)
+Completed 200 OK in 97ms (Views: 92.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 01:59:52 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.7ms)
+  Rendered movies/_header.html.erb (0.6ms)
+Completed 200 OK in 62ms (Views: 57.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:00:08 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.8ms)
+  Rendered movies/_header.html.erb (0.4ms)
+Completed 200 OK in 67ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies/search" for 127.0.0.1 at 2018-11-09 02:00:16 +0100
+Processing by MoviesController#create as HTML
+  Parameters: {"word"=>"Inception", "utf8"=>"✓", "authenticity_token"=>"LwFsRISnBoz3M06neaEo9lanmNPl3Qiq4lk2M63m3zVLM7RU/73iXIZn3nHGYCCbXhZCMECLjZyA+BG+HyQTwQ=="}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (18.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception"], ["realease_date", "2010-07-15"], ["created_at", "2018-11-09 01:00:17.102138"], ["updated_at", "2018-11-09 01:00:17.102138"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (14.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (1.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception: The Cobol Job"], ["realease_date", "2010-12-07"], ["created_at", "2018-11-09 01:00:17.415588"], ["updated_at", "2018-11-09 01:00:17.415588"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Bikini Inception"], ["realease_date", "2015-05-19"], ["created_at", "2018-11-09 01:00:17.679937"], ["updated_at", "2018-11-09 01:00:17.679937"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "WWA The Inception"], ["realease_date", "2001-10-26"], ["created_at", "2018-11-09 01:00:17.937619"], ["updated_at", "2018-11-09 01:00:17.937619"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "The Inception of Dramatic Representation"], ["created_at", "2018-11-09 01:00:18.141400"], ["updated_at", "2018-11-09 01:00:18.141400"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  Rendering movies/search.html.erb within layouts/application
+  [1m[36mMovie Load (1.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE (title ILIKE '%Inception%')[0m
+  ↳ app/views/movies/search.html.erb:27
+  Rendered movies/search.html.erb within layouts/application (8.6ms)
+  Rendered movies/_header.html.erb (0.5ms)
+Completed 200 OK in 1944ms (Views: 53.7ms | ActiveRecord: 53.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:03:26 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.1ms)
+  Rendered movies/_header.html.erb (0.5ms)
+Completed 200 OK in 65ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:04:13 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.6ms)
+  Rendered movies/_header.html.erb (0.6ms)
+Completed 200 OK in 65ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies/search" for 127.0.0.1 at 2018-11-09 02:04:18 +0100
+Processing by MoviesController#create as HTML
+  Parameters: {"word"=>"Avatar", "utf8"=>"✓", "authenticity_token"=>"JhL1vBOgj8O2YP7x44JJ+U0YfyYOMlMTbMLG2Iy1PrRCIC2saLprE8c0bidcQ0GURamlxatk1iUOY+FVPnfyQA=="}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.9ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar"], ["director", "James Cameron"], ["realease_date", "2009-12-10"], ["created_at", "2018-11-09 01:04:19.014147"], ["updated_at", "2018-11-09 01:04:19.014147"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Way of Water"], ["director", "James Cameron"], ["realease_date", "2020-12-16"], ["created_at", "2018-11-09 01:04:19.292968"], ["updated_at", "2018-11-09 01:04:19.292968"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar"], ["director", "Atsushi Wada"], ["realease_date", "2011-04-30"], ["created_at", "2018-11-09 01:04:19.498831"], ["updated_at", "2018-11-09 01:04:19.498831"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Tulkun Rider"], ["director", "James Cameron"], ["realease_date", "2024-12-18"], ["created_at", "2018-11-09 01:04:19.745048"], ["updated_at", "2018-11-09 01:04:19.745048"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar"], ["director", "Premankur Atorthy"], ["realease_date", "1941-09-16"], ["created_at", "2018-11-09 01:04:19.961011"], ["updated_at", "2018-11-09 01:04:19.961011"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Capturing Avatar"], ["director", "Laurent Bouzereau"], ["realease_date", "2010-11-16"], ["created_at", "2018-11-09 01:04:20.260007"], ["updated_at", "2018-11-09 01:04:20.260007"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.9ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Seed Bearer"], ["director", "James Cameron"], ["realease_date", "2021-12-15"], ["created_at", "2018-11-09 01:04:20.507592"], ["updated_at", "2018-11-09 01:04:20.507592"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "In Wahrheit: Tödliches Geheimnis"], ["director", "Matthias Tiefenbacher"], ["realease_date", "2018-06-01"], ["created_at", "2018-11-09 01:04:20.740425"], ["updated_at", "2018-11-09 01:04:20.740425"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar Days"], ["director", "Gavin Kelly"], ["realease_date", "2010-02-02"], ["created_at", "2018-11-09 01:04:20.944763"], ["updated_at", "2018-11-09 01:04:20.944763"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar Spirits"], ["realease_date", "2010-06-22"], ["created_at", "2018-11-09 01:04:21.198367"], ["updated_at", "2018-11-09 01:04:21.198367"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Quest for Eywa"], ["director", "James Cameron"], ["realease_date", "2025-12-17"], ["created_at", "2018-11-09 01:04:21.468420"], ["updated_at", "2018-11-09 01:04:21.468420"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Avatar and Me"], ["director", "Bente Milton"], ["realease_date", "2010-11-10"], ["created_at", "2018-11-09 01:04:21.677103"], ["updated_at", "2018-11-09 01:04:21.677103"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Eternity"], ["director", "Steven Paul"], ["realease_date", "1990-11-15"], ["created_at", "2018-11-09 01:04:21.917952"], ["updated_at", "2018-11-09 01:04:21.917952"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar Flight of Passage"], ["realease_date", "2017-05-01"], ["created_at", "2018-11-09 01:04:22.153299"], ["updated_at", "2018-11-09 01:04:22.153299"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Last Hoodbender"], ["director", "Mark Phillips"], ["realease_date", "2016-12-06"], ["created_at", "2018-11-09 01:04:22.365568"], ["updated_at", "2018-11-09 01:04:22.365568"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar: Scene Deconstruction"], ["realease_date", "2009-12-18"], ["created_at", "2018-11-09 01:04:22.590643"], ["updated_at", "2018-11-09 01:04:22.590643"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar: Production Materials"], ["realease_date", "2009-12-18"], ["created_at", "2018-11-09 01:04:22.823121"], ["updated_at", "2018-11-09 01:04:22.823121"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Exchange of Souls"], ["director", "Janusz Majewski"], ["realease_date", "1964-01-01"], ["created_at", "2018-11-09 01:04:23.074352"], ["updated_at", "2018-11-09 01:04:23.074352"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (1.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar:[2015] Wacken Open Air"], ["realease_date", "2015-08-01"], ["created_at", "2018-11-09 01:04:23.291601"], ["updated_at", "2018-11-09 01:04:23.291601"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: Creating the World of Pandora"], ["director", "Thomas C. Grane"], ["realease_date", "2010-02-07"], ["created_at", "2018-11-09 01:04:23.529109"], ["updated_at", "2018-11-09 01:04:23.529109"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  Rendering movies/search.html.erb within layouts/application
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE (title ILIKE '%Avatar%')[0m
+  ↳ app/views/movies/search.html.erb:27
+  Rendered movies/search.html.erb within layouts/application (4.4ms)
+  Rendered movies/_header.html.erb (0.5ms)
+Completed 200 OK in 5448ms (Views: 53.7ms | ActiveRecord: 61.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:05:55 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (333.1ms)
+Completed 500 Internal Server Error in 355ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `s' for #<#<Class:0x00007fa87d9e84c8>:0x00007fa87c4b3238>):
+    23:       </div>
+    24: <% end %>
+    25: <td align="center" style="max-width: 200px;">
+    26:   <img src= <%= "https://image.tmdb.org/t/p/w500/"+s.poster_path.to_s %> style="max-width:25%; max-height:25%;">
+    27: </td>
+    28: <td style="max-width: 100px;">
+    29: <% if @movies %>
+  
+app/views/movies/search.html.erb:26:in `_app_views_movies_search_html_erb___837067987909825866_70180808269220'
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:06:44 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (369.4ms)
+Completed 500 Internal Server Error in 387ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `s' for #<#<Class:0x00007fa87d9e84c8>:0x00007fa8808dfec0>):
+    23:       </div>
+    24: <% end %>
+    25: <td align="center" style="max-width: 200px;">
+    26:   <img src= <%= "https://image.tmdb.org/t/p/w500/"+s.poster_path.to_s %> style="max-width:25%; max-height:25%;">
+    27: </td>
+    28: <td style="max-width: 100px;">
+    29: <% if @movies %>
+  
+app/views/movies/search.html.erb:26:in `_app_views_movies_search_html_erb___837067987909825866_70180807902440'
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:07:05 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (15.6ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `poster_path' for "https://image.tmdb.org/t/p/w500/":String):
+    23:       </div>
+    24: <% end %>
+    25: <td align="center" style="max-width: 200px;">
+    26:   <img src= <%= "https://image.tmdb.org/t/p/w500/".poster_path.to_s %> style="max-width:25%; max-height:25%;">
+    27: </td>
+    28: <td style="max-width: 100px;">
+    29: <% if @movies %>
+  
+app/views/movies/search.html.erb:26:in `_app_views_movies_search_html_erb___837067987909825866_70180838201080'
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:07:34 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.7ms)
+  Rendered movies/_header.html.erb (0.5ms)
+Completed 200 OK in 77ms (Views: 71.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies/search" for 127.0.0.1 at 2018-11-09 02:07:38 +0100
+Processing by MoviesController#create as HTML
+  Parameters: {"word"=>"Inception", "utf8"=>"✓", "authenticity_token"=>"R6wPnG+QlQrQTbLBYqkivDbi3ksOhMzmGGjjzbe1LrojnteMFIpx2qEZIhfdaCrRPlMEqKvSSdB6ycRABXfiTg=="}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception"], ["realease_date", "2010-07-15"], ["created_at", "2018-11-09 01:07:39.170381"], ["updated_at", "2018-11-09 01:07:39.170381"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception: The Cobol Job"], ["realease_date", "2010-12-07"], ["created_at", "2018-11-09 01:07:39.406709"], ["updated_at", "2018-11-09 01:07:39.406709"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Bikini Inception"], ["realease_date", "2015-05-19"], ["created_at", "2018-11-09 01:07:39.625905"], ["updated_at", "2018-11-09 01:07:39.625905"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "WWA The Inception"], ["realease_date", "2001-10-26"], ["created_at", "2018-11-09 01:07:39.845581"], ["updated_at", "2018-11-09 01:07:39.845581"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "The Inception of Dramatic Representation"], ["created_at", "2018-11-09 01:07:40.045418"], ["updated_at", "2018-11-09 01:07:40.045418"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  Rendering movies/search.html.erb within layouts/application
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE (title ILIKE '%Inception%')[0m
+  ↳ app/views/movies/search.html.erb:29
+  Rendered movies/search.html.erb within layouts/application (7.6ms)
+  Rendered movies/_header.html.erb (0.6ms)
+Completed 200 OK in 1843ms (Views: 54.9ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/movies/search" for 127.0.0.1 at 2018-11-09 02:08:25 +0100
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for MoviesController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/movies/search" for 127.0.0.1 at 2018-11-09 02:08:40 +0100
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for MoviesController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:08:57 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (5.0ms)
+  Rendered movies/_header.html.erb (0.4ms)
+Completed 200 OK in 69ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies/search" for 127.0.0.1 at 2018-11-09 02:09:02 +0100
+Processing by MoviesController#create as HTML
+  Parameters: {"word"=>"Avatar", "utf8"=>"✓", "authenticity_token"=>"7tKWMUeyYzXYnRN6AQYaudAHJXTO3Fo/Zc8DAYkvmy6K4E4hPKiH5anJg6y+xxLU2Lb/l2uK3wkHbiSMO+1X2g=="}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar"], ["director", "James Cameron"], ["realease_date", "2009-12-10"], ["created_at", "2018-11-09 01:09:03.186826"], ["updated_at", "2018-11-09 01:09:03.186826"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Way of Water"], ["director", "James Cameron"], ["realease_date", "2020-12-16"], ["created_at", "2018-11-09 01:09:03.441063"], ["updated_at", "2018-11-09 01:09:03.441063"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar"], ["director", "Atsushi Wada"], ["realease_date", "2011-04-30"], ["created_at", "2018-11-09 01:09:03.673368"], ["updated_at", "2018-11-09 01:09:03.673368"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Tulkun Rider"], ["director", "James Cameron"], ["realease_date", "2024-12-18"], ["created_at", "2018-11-09 01:09:03.961029"], ["updated_at", "2018-11-09 01:09:03.961029"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar"], ["director", "Premankur Atorthy"], ["realease_date", "1941-09-16"], ["created_at", "2018-11-09 01:09:04.179336"], ["updated_at", "2018-11-09 01:09:04.179336"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Capturing Avatar"], ["director", "Laurent Bouzereau"], ["realease_date", "2010-11-16"], ["created_at", "2018-11-09 01:09:04.394733"], ["updated_at", "2018-11-09 01:09:04.394733"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Seed Bearer"], ["director", "James Cameron"], ["realease_date", "2021-12-15"], ["created_at", "2018-11-09 01:09:04.603266"], ["updated_at", "2018-11-09 01:09:04.603266"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "In Wahrheit: Tödliches Geheimnis"], ["director", "Matthias Tiefenbacher"], ["realease_date", "2018-06-01"], ["created_at", "2018-11-09 01:09:04.816805"], ["updated_at", "2018-11-09 01:09:04.816805"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar Days"], ["director", "Gavin Kelly"], ["realease_date", "2010-02-02"], ["created_at", "2018-11-09 01:09:05.041534"], ["updated_at", "2018-11-09 01:09:05.041534"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar Spirits"], ["realease_date", "2010-06-22"], ["created_at", "2018-11-09 01:09:05.261201"], ["updated_at", "2018-11-09 01:09:05.261201"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Quest for Eywa"], ["director", "James Cameron"], ["realease_date", "2025-12-17"], ["created_at", "2018-11-09 01:09:05.496483"], ["updated_at", "2018-11-09 01:09:05.496483"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Avatar and Me"], ["director", "Bente Milton"], ["realease_date", "2010-11-10"], ["created_at", "2018-11-09 01:09:05.812669"], ["updated_at", "2018-11-09 01:09:05.812669"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Eternity"], ["director", "Steven Paul"], ["realease_date", "1990-11-15"], ["created_at", "2018-11-09 01:09:06.046661"], ["updated_at", "2018-11-09 01:09:06.046661"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar Flight of Passage"], ["realease_date", "2017-05-01"], ["created_at", "2018-11-09 01:09:06.296031"], ["updated_at", "2018-11-09 01:09:06.296031"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Last Hoodbender"], ["director", "Mark Phillips"], ["realease_date", "2016-12-06"], ["created_at", "2018-11-09 01:09:06.515753"], ["updated_at", "2018-11-09 01:09:06.515753"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar: Scene Deconstruction"], ["realease_date", "2009-12-18"], ["created_at", "2018-11-09 01:09:06.754749"], ["updated_at", "2018-11-09 01:09:06.754749"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar: Production Materials"], ["realease_date", "2009-12-18"], ["created_at", "2018-11-09 01:09:07.014511"], ["updated_at", "2018-11-09 01:09:07.014511"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Exchange of Souls"], ["director", "Janusz Majewski"], ["realease_date", "1964-01-01"], ["created_at", "2018-11-09 01:09:07.258990"], ["updated_at", "2018-11-09 01:09:07.258990"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar:[2015] Wacken Open Air"], ["realease_date", "2015-08-01"], ["created_at", "2018-11-09 01:09:07.457401"], ["updated_at", "2018-11-09 01:09:07.457401"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: Creating the World of Pandora"], ["director", "Thomas C. Grane"], ["realease_date", "2010-02-07"], ["created_at", "2018-11-09 01:09:07.713106"], ["updated_at", "2018-11-09 01:09:07.713106"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  Rendering movies/search.html.erb within layouts/application
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE (title ILIKE '%Avatar%')[0m
+  ↳ app/views/movies/search.html.erb:29
+  Rendered movies/search.html.erb within layouts/application (5.7ms)
+  Rendered movies/_header.html.erb (0.7ms)
+Completed 200 OK in 5473ms (Views: 60.0ms | ActiveRecord: 53.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:11:16 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.6ms)
+  Rendered movies/_header.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:12:35 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.0ms)
+  Rendered movies/_header.html.erb (0.5ms)
+Completed 200 OK in 107ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:14:07 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.6ms)
+  Rendered movies/_header.html.erb (0.6ms)
+Completed 200 OK in 64ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:14:43 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.9ms)
+  Rendered movies/_header.html.erb (1.1ms)
+Completed 200 OK in 70ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies/search" for 127.0.0.1 at 2018-11-09 02:14:46 +0100
+Processing by MoviesController#create as HTML
+  Parameters: {"word"=>"Inception", "utf8"=>"✓", "authenticity_token"=>"aAT7og/JTkm5cYOPwZX6RcShNj4T6W/dkCxYtrc5lf0MNiOydNOqmcglE1l+VPIozBDs3ba/6uvyjX87BftZCQ=="}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception"], ["realease_date", "2010-07-15"], ["created_at", "2018-11-09 01:14:47.514905"], ["updated_at", "2018-11-09 01:14:47.514905"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception: The Cobol Job"], ["realease_date", "2010-12-07"], ["created_at", "2018-11-09 01:14:47.785399"], ["updated_at", "2018-11-09 01:14:47.785399"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Bikini Inception"], ["realease_date", "2015-05-19"], ["created_at", "2018-11-09 01:14:48.031035"], ["updated_at", "2018-11-09 01:14:48.031035"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "WWA The Inception"], ["realease_date", "2001-10-26"], ["created_at", "2018-11-09 01:14:48.244422"], ["updated_at", "2018-11-09 01:14:48.244422"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "The Inception of Dramatic Representation"], ["created_at", "2018-11-09 01:14:48.474445"], ["updated_at", "2018-11-09 01:14:48.474445"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  Rendering movies/search.html.erb within layouts/application
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE (title ILIKE '%Inception%')[0m
+  ↳ app/views/movies/search.html.erb:27
+  Rendered movies/search.html.erb within layouts/application (7.1ms)
+  Rendered movies/_header.html.erb (0.5ms)
+Completed 200 OK in 1925ms (Views: 51.8ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/movies/search" for 127.0.0.1 at 2018-11-09 02:16:01 +0100
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for MoviesController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:22:27 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (3.2ms)
+  Rendered movies/_header.html.erb (0.6ms)
+Completed 200 OK in 433ms (Views: 419.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:23:01 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.9ms)
+  Rendered movies/_header.html.erb (0.6ms)
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:37:40 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/elodieletellier/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (3.1ms)
+  Rendered movies/_header.html.erb (0.6ms)
+Completed 200 OK in 411ms (Views: 398.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies/search" for 127.0.0.1 at 2018-11-09 02:37:45 +0100
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M2qmnVcnuXunZcusnyYLeoQJFEtdOYUCwMGX04Sr0rkmfzWOkMzhdKKHZK3O4ZP+wxCE+d6WYk34Nu2jNAupcA==", "word"=>"Inception"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (5.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception"], ["realease_date", "2010-07-15"], ["created_at", "2018-11-09 01:37:46.617370"], ["updated_at", "2018-11-09 01:37:46.617370"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (1.9ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception: The Cobol Job"], ["realease_date", "2010-12-07"], ["created_at", "2018-11-09 01:37:46.864158"], ["updated_at", "2018-11-09 01:37:46.864158"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Bikini Inception"], ["realease_date", "2015-05-19"], ["created_at", "2018-11-09 01:37:47.071305"], ["updated_at", "2018-11-09 01:37:47.071305"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "WWA The Inception"], ["realease_date", "2001-10-26"], ["created_at", "2018-11-09 01:37:47.272743"], ["updated_at", "2018-11-09 01:37:47.272743"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "The Inception of Dramatic Representation"], ["created_at", "2018-11-09 01:37:47.490138"], ["updated_at", "2018-11-09 01:37:47.490138"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  Rendering movies/search.html.erb within layouts/application
+  [1m[36mMovie Load (5.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE (title ILIKE '%Inception%')[0m
+  ↳ app/views/movies/search.html.erb:19
+  Rendered movies/search.html.erb within layouts/application (13.5ms)
+  Rendered movies/_header.html.erb (0.6ms)
+Completed 200 OK in 1739ms (Views: 45.6ms | ActiveRecord: 36.0ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at 2018-11-09 02:37:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo.png"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/movies/search" for 127.0.0.1 at 2018-11-09 02:38:31 +0100
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for MoviesController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:38:40 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.6ms)
+  Rendered movies/_header.html.erb (0.4ms)
+Completed 200 OK in 65ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies/search" for 127.0.0.1 at 2018-11-09 02:38:46 +0100
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"StQm6sgJSYDjoZYUVD/WoJ/IF+n4F3Ow8gMns5o3HmJfwbX5D+IRj+ZDORUF+E4k2NGHW3u4lP/K9F3DKpdlqw==", "word"=>"Avatar"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (3.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar"], ["director", "James Cameron"], ["realease_date", "2009-12-10"], ["created_at", "2018-11-09 01:38:46.932323"], ["updated_at", "2018-11-09 01:38:46.932323"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar"], ["director", "Atsushi Wada"], ["realease_date", "2011-04-30"], ["created_at", "2018-11-09 01:38:47.215971"], ["updated_at", "2018-11-09 01:38:47.215971"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Way of Water"], ["director", "James Cameron"], ["realease_date", "2020-12-16"], ["created_at", "2018-11-09 01:38:47.427921"], ["updated_at", "2018-11-09 01:38:47.427921"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Capturing Avatar"], ["director", "Laurent Bouzereau"], ["realease_date", "2010-11-16"], ["created_at", "2018-11-09 01:38:47.668977"], ["updated_at", "2018-11-09 01:38:47.668977"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (3.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Tulkun Rider"], ["director", "James Cameron"], ["realease_date", "2024-12-18"], ["created_at", "2018-11-09 01:38:47.882835"], ["updated_at", "2018-11-09 01:38:47.882835"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar"], ["director", "Premankur Atorthy"], ["realease_date", "1941-09-16"], ["created_at", "2018-11-09 01:38:48.101165"], ["updated_at", "2018-11-09 01:38:48.101165"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (2.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "In Wahrheit: Tödliches Geheimnis"], ["director", "Matthias Tiefenbacher"], ["realease_date", "2018-06-01"], ["created_at", "2018-11-09 01:38:48.341650"], ["updated_at", "2018-11-09 01:38:48.341650"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Quest for Eywa"], ["director", "James Cameron"], ["realease_date", "2025-12-17"], ["created_at", "2018-11-09 01:38:48.546539"], ["updated_at", "2018-11-09 01:38:48.546539"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Seed Bearer"], ["director", "James Cameron"], ["realease_date", "2021-12-15"], ["created_at", "2018-11-09 01:38:48.766516"], ["updated_at", "2018-11-09 01:38:48.766516"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar Spirits"], ["realease_date", "2010-06-22"], ["created_at", "2018-11-09 01:38:48.976205"], ["updated_at", "2018-11-09 01:38:48.976205"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar Days"], ["director", "Gavin Kelly"], ["realease_date", "2010-02-02"], ["created_at", "2018-11-09 01:38:49.224150"], ["updated_at", "2018-11-09 01:38:49.224150"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Eternity"], ["director", "Steven Paul"], ["realease_date", "1990-11-15"], ["created_at", "2018-11-09 01:38:49.474538"], ["updated_at", "2018-11-09 01:38:49.474538"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (1.0ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Avatar and Me"], ["director", "Bente Milton"], ["realease_date", "2010-11-10"], ["created_at", "2018-11-09 01:38:49.701146"], ["updated_at", "2018-11-09 01:38:49.701146"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.9ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar Flight of Passage"], ["realease_date", "2017-05-01"], ["created_at", "2018-11-09 01:38:49.952990"], ["updated_at", "2018-11-09 01:38:49.952990"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar: Scene Deconstruction"], ["realease_date", "2009-12-18"], ["created_at", "2018-11-09 01:38:50.176528"], ["updated_at", "2018-11-09 01:38:50.176528"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar: Production Materials"], ["realease_date", "2009-12-18"], ["created_at", "2018-11-09 01:38:50.378040"], ["updated_at", "2018-11-09 01:38:50.378040"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Last Hoodbender"], ["director", "Mark Phillips"], ["realease_date", "2016-12-06"], ["created_at", "2018-11-09 01:38:50.581686"], ["updated_at", "2018-11-09 01:38:50.581686"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Exchange of Souls"], ["director", "Janusz Majewski"], ["realease_date", "1964-01-01"], ["created_at", "2018-11-09 01:38:50.786371"], ["updated_at", "2018-11-09 01:38:50.786371"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar:[2015] Wacken Open Air"], ["realease_date", "2015-08-01"], ["created_at", "2018-11-09 01:38:51.003394"], ["updated_at", "2018-11-09 01:38:51.003394"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: Creating the World of Pandora"], ["director", "Thomas C. Grane"], ["realease_date", "2010-02-07"], ["created_at", "2018-11-09 01:38:51.211629"], ["updated_at", "2018-11-09 01:38:51.211629"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  Rendering movies/search.html.erb within layouts/application
+  [1m[36mMovie Load (4.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE (title ILIKE '%Avatar%')[0m
+  ↳ app/views/movies/search.html.erb:20
+  Rendered movies/search.html.erb within layouts/application (11.1ms)
+  Rendered movies/_header.html.erb (0.5ms)
+Completed 200 OK in 5225ms (Views: 51.4ms | ActiveRecord: 63.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at 2018-11-09 02:38:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo.png"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/movies/search" for 127.0.0.1 at 2018-11-09 02:39:43 +0100
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for MoviesController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:39:51 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.5ms)
+  Rendered movies/_header.html.erb (0.7ms)
+Completed 200 OK in 64ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies/search" for 127.0.0.1 at 2018-11-09 02:39:55 +0100
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jXRuJPC3tsEvRSjJfXrstBoTeld+MbAo94Moy7W0CFiYYf03N1zuziqnh8gsvXQwXQrq5f2eV2fPdFK7BRRzkQ==", "word"=>"Inception"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception"], ["realease_date", "2010-07-15"], ["created_at", "2018-11-09 01:39:56.325844"], ["updated_at", "2018-11-09 01:39:56.325844"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception: The Cobol Job"], ["realease_date", "2010-12-07"], ["created_at", "2018-11-09 01:39:56.527231"], ["updated_at", "2018-11-09 01:39:56.527231"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Bikini Inception"], ["realease_date", "2015-05-19"], ["created_at", "2018-11-09 01:39:56.759160"], ["updated_at", "2018-11-09 01:39:56.759160"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (1.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "WWA The Inception"], ["realease_date", "2001-10-26"], ["created_at", "2018-11-09 01:39:56.961153"], ["updated_at", "2018-11-09 01:39:56.961153"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "The Inception of Dramatic Representation"], ["created_at", "2018-11-09 01:39:57.181485"], ["updated_at", "2018-11-09 01:39:57.181485"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  Rendering movies/search.html.erb within layouts/application
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE (title ILIKE '%Inception%')[0m
+  ↳ app/views/movies/search.html.erb:20
+  Rendered movies/search.html.erb within layouts/application (17.7ms)
+  Rendered movies/_header.html.erb (0.4ms)
+Completed 200 OK in 1674ms (Views: 60.2ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at 2018-11-09 02:39:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo.png"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:40:22 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.6ms)
+  Rendered movies/_header.html.erb (0.6ms)
+Completed 200 OK in 65ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at 2018-11-09 02:40:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo.png"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/movies/search" for 127.0.0.1 at 2018-11-09 02:40:26 +0100
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jVTocF3RA27nlrN8l76jlI46/JJt9hc1R2Ear70wjRbpZjBgJsvnvpbCI6oof6v5hosmccigkgMlwD0iD/JB4g==", "word"=>"Inception"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception"], ["realease_date", "2010-07-15"], ["created_at", "2018-11-09 01:40:27.149172"], ["updated_at", "2018-11-09 01:40:27.149172"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception: The Cobol Job"], ["realease_date", "2010-12-07"], ["created_at", "2018-11-09 01:40:27.377571"], ["updated_at", "2018-11-09 01:40:27.377571"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Bikini Inception"], ["realease_date", "2015-05-19"], ["created_at", "2018-11-09 01:40:27.608984"], ["updated_at", "2018-11-09 01:40:27.608984"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (1.0ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "WWA The Inception"], ["realease_date", "2001-10-26"], ["created_at", "2018-11-09 01:40:27.823106"], ["updated_at", "2018-11-09 01:40:27.823106"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "The Inception of Dramatic Representation"], ["created_at", "2018-11-09 01:40:28.088302"], ["updated_at", "2018-11-09 01:40:28.088302"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  Rendering movies/search.html.erb within layouts/application
+  [1m[36mMovie Load (2.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE (title ILIKE '%Inception%')[0m
+  ↳ app/views/movies/search.html.erb:20
+  Rendered movies/search.html.erb within layouts/application (11.9ms)
+  Rendered movies/_header.html.erb (0.6ms)
+Completed 200 OK in 1755ms (Views: 52.0ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:41:52 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.8ms)
+  Rendered movies/_header.html.erb (0.5ms)
+Completed 200 OK in 59ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies/search" for 127.0.0.1 at 2018-11-09 02:41:56 +0100
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ci06kHHsQF3GubxrCjxnr/RSRJhX/kguAWy+zlYpCmgWH+KACvakjbftLL21/W/C/OOee/KozRhjzZlD5OvGnA==", "word"=>"Inception"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception"], ["realease_date", "2010-07-15"], ["created_at", "2018-11-09 01:41:57.331025"], ["updated_at", "2018-11-09 01:41:57.331025"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception: The Cobol Job"], ["realease_date", "2010-12-07"], ["created_at", "2018-11-09 01:41:57.579766"], ["updated_at", "2018-11-09 01:41:57.579766"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Bikini Inception"], ["realease_date", "2015-05-19"], ["created_at", "2018-11-09 01:41:57.851272"], ["updated_at", "2018-11-09 01:41:57.851272"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "WWA The Inception"], ["realease_date", "2001-10-26"], ["created_at", "2018-11-09 01:41:58.061823"], ["updated_at", "2018-11-09 01:41:58.061823"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "The Inception of Dramatic Representation"], ["created_at", "2018-11-09 01:41:58.280760"], ["updated_at", "2018-11-09 01:41:58.280760"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  Rendering movies/search.html.erb within layouts/application
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE (title ILIKE '%Inception%')[0m
+  ↳ app/views/movies/search.html.erb:20
+  Rendered movies/search.html.erb within layouts/application (9.5ms)
+  Rendered movies/_header.html.erb (0.8ms)
+Completed 200 OK in 1899ms (Views: 59.7ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:43:01 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.2ms)
+  Rendered movies/_header.html.erb (0.6ms)
+Completed 200 OK in 54ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies/search" for 127.0.0.1 at 2018-11-09 02:43:03 +0100
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GmL1UjGpLdrajwsccLwR/1lhWW/feCE1t0jilQzITaJ+UC1CSrPJCqvbm8rPfRmSUdCDjHoupAPV6cUYvgqBVg==", "word"=>"Avatar"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar"], ["director", "James Cameron"], ["realease_date", "2009-12-10"], ["created_at", "2018-11-09 01:43:04.834424"], ["updated_at", "2018-11-09 01:43:04.834424"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar"], ["director", "Atsushi Wada"], ["realease_date", "2011-04-30"], ["created_at", "2018-11-09 01:43:05.045291"], ["updated_at", "2018-11-09 01:43:05.045291"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Way of Water"], ["director", "James Cameron"], ["realease_date", "2020-12-16"], ["created_at", "2018-11-09 01:43:05.259341"], ["updated_at", "2018-11-09 01:43:05.259341"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Capturing Avatar"], ["director", "Laurent Bouzereau"], ["realease_date", "2010-11-16"], ["created_at", "2018-11-09 01:43:05.489244"], ["updated_at", "2018-11-09 01:43:05.489244"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Tulkun Rider"], ["director", "James Cameron"], ["realease_date", "2024-12-18"], ["created_at", "2018-11-09 01:43:05.724700"], ["updated_at", "2018-11-09 01:43:05.724700"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar"], ["director", "Premankur Atorthy"], ["realease_date", "1941-09-16"], ["created_at", "2018-11-09 01:43:05.964077"], ["updated_at", "2018-11-09 01:43:05.964077"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "In Wahrheit: Tödliches Geheimnis"], ["director", "Matthias Tiefenbacher"], ["realease_date", "2018-06-01"], ["created_at", "2018-11-09 01:43:06.182591"], ["updated_at", "2018-11-09 01:43:06.182591"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Quest for Eywa"], ["director", "James Cameron"], ["realease_date", "2025-12-17"], ["created_at", "2018-11-09 01:43:06.409720"], ["updated_at", "2018-11-09 01:43:06.409720"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Seed Bearer"], ["director", "James Cameron"], ["realease_date", "2021-12-15"], ["created_at", "2018-11-09 01:43:06.635772"], ["updated_at", "2018-11-09 01:43:06.635772"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar Spirits"], ["realease_date", "2010-06-22"], ["created_at", "2018-11-09 01:43:06.854277"], ["updated_at", "2018-11-09 01:43:06.854277"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar Days"], ["director", "Gavin Kelly"], ["realease_date", "2010-02-02"], ["created_at", "2018-11-09 01:43:07.068976"], ["updated_at", "2018-11-09 01:43:07.068976"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Eternity"], ["director", "Steven Paul"], ["realease_date", "1990-11-15"], ["created_at", "2018-11-09 01:43:07.297054"], ["updated_at", "2018-11-09 01:43:07.297054"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Avatar and Me"], ["director", "Bente Milton"], ["realease_date", "2010-11-10"], ["created_at", "2018-11-09 01:43:07.543778"], ["updated_at", "2018-11-09 01:43:07.543778"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar Flight of Passage"], ["realease_date", "2017-05-01"], ["created_at", "2018-11-09 01:43:07.769592"], ["updated_at", "2018-11-09 01:43:07.769592"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar: Scene Deconstruction"], ["realease_date", "2009-12-18"], ["created_at", "2018-11-09 01:43:07.974482"], ["updated_at", "2018-11-09 01:43:07.974482"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar: Production Materials"], ["realease_date", "2009-12-18"], ["created_at", "2018-11-09 01:43:08.198574"], ["updated_at", "2018-11-09 01:43:08.198574"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Last Hoodbender"], ["director", "Mark Phillips"], ["realease_date", "2016-12-06"], ["created_at", "2018-11-09 01:43:08.403371"], ["updated_at", "2018-11-09 01:43:08.403371"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: The Exchange of Souls"], ["director", "Janusz Majewski"], ["realease_date", "1964-01-01"], ["created_at", "2018-11-09 01:43:08.638995"], ["updated_at", "2018-11-09 01:43:08.638995"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Avatar:[2015] Wacken Open Air"], ["realease_date", "2015-08-01"], ["created_at", "2018-11-09 01:43:08.866066"], ["updated_at", "2018-11-09 01:43:08.866066"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Avatar: Creating the World of Pandora"], ["director", "Thomas C. Grane"], ["realease_date", "2010-02-07"], ["created_at", "2018-11-09 01:43:09.110933"], ["updated_at", "2018-11-09 01:43:09.110933"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  Rendering movies/search.html.erb within layouts/application
+  [1m[36mMovie Load (1.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE (title ILIKE '%Avatar%')[0m
+  ↳ app/views/movies/search.html.erb:20
+  Rendered movies/search.html.erb within layouts/application (11.4ms)
+  Rendered movies/_header.html.erb (0.6ms)
+Completed 200 OK in 5180ms (Views: 54.1ms | ActiveRecord: 57.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 02:44:14 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.5ms)
+  Rendered movies/_header.html.erb (0.4ms)
+Completed 200 OK in 58ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies/search" for 127.0.0.1 at 2018-11-09 02:44:17 +0100
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"clWBWTgzQPpedZl3dzDlMvGuXzXpN4MFB8fQFuZXfkAWZ1lJQymkKi8hCaHI8e1f+R+F1kxhBjNlZvebVJWytA==", "word"=>"Inception"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception"], ["realease_date", "2010-07-15"], ["created_at", "2018-11-09 01:44:18.149438"], ["updated_at", "2018-11-09 01:44:18.149438"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Inception: The Cobol Job"], ["realease_date", "2010-12-07"], ["created_at", "2018-11-09 01:44:18.367933"], ["updated_at", "2018-11-09 01:44:18.367933"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Bikini Inception"], ["realease_date", "2015-05-19"], ["created_at", "2018-11-09 01:44:18.624381"], ["updated_at", "2018-11-09 01:44:18.624381"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "realease_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "WWA The Inception"], ["realease_date", "2001-10-26"], ["created_at", "2018-11-09 01:44:18.843270"], ["updated_at", "2018-11-09 01:44:18.843270"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_movie.rb:33
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "The Inception of Dramatic Representation"], ["created_at", "2018-11-09 01:44:19.060367"], ["updated_at", "2018-11-09 01:44:19.060367"]]
+  ↳ app/services/search_movie.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_movie.rb:33
+  Rendering movies/search.html.erb within layouts/application
+  [1m[36mMovie Load (1.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE (title ILIKE '%Inception%')[0m
+  ↳ app/views/movies/search.html.erb:20
+  Rendered movies/search.html.erb within layouts/application (10.0ms)
+  Rendered movies/_header.html.erb (0.5ms)
+Completed 200 OK in 1708ms (Views: 51.2ms | ActiveRecord: 16.0ms)
+
+
