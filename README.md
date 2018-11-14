@@ -1,20 +1,18 @@
-## Le scrappeur de crypto
+## Hello Movies
 
-L'exercice consistait à créer un site avec ruby on rails. 
+This Rails App is a search engine for movies by Team Ponctuals :
+  - Marc => @Marco_A
+  - Steve => @Bsteve
+  - Elodie => @tite_Lodi
 
-Travail réalisé par Colin/Alexandre/Thomas/Mélisande
-## Pour commencer
-Clonez le dépôt.
+## Config
+Clone this repo
 ```
 bundle install
-```
-Puis il faut lancer le serveur :
-:
-```
+rails db:create
+rails db:migrate
 rails server
 ```
-Pour accéder au site : http://localhost:3000/
+Production link : https://immense-woodland-49015.herokuapp.com
 
-## Prérequis
-Ruby 2.5.1
-Rails 5.2.1
+Enjoy !
