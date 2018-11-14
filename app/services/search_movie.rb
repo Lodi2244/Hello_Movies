@@ -19,7 +19,7 @@ class SearchMovie
        @title = @give[i].title
        @director = director_name(i)
        @release_date = @give[i].release_date
-       @poster_path = @give[i].poster_path
+       #@poster_path = @give[i].poster_path
        save
        i += 1
 	  end
@@ -30,10 +30,12 @@ class SearchMovie
 	  movie.title = @title
 	  movie.director = @director
 	  movie.realease_date = @release_date
+		#movie.poster_path = @poster_path
 	  movie.save
 	end
 
 	private
+
 
 	def director_name(i)
         crew = Tmdb::Movie.credits(@give[i].id).flatten

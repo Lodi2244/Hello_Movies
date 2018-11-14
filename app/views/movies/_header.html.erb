@@ -1,12 +1,23 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<span class="navbar-toggler-icon" img="../images/logo.png" size="200%"></span>
-  <a class="navbar-brand" href="#">Hello Movies</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 
-  </button>
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-  </div>
-</nav>
+  <ul>
+      <li><%= image_tag("logo.png", size: "120x50")%></li>
+      <li>Hello Movies </li>
+      <li>Home</li>
+      <span class="dropdown" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= image_tag("avatar.png", size: "60x70")%>
+          <a href="javascript:void(0)" class="dropbtn"></a>
+            <div class="dropdown-content">
+              <a href="#">Profile</a>
+                <a href="#">Log out</a>
+                </div>
+                </span>
+              </ul>
+            </div>
+          </div>
+  </nav>
+</header>

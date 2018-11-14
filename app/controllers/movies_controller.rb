@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def search
-    	
+
   end
 
   def create
@@ -10,3 +10,13 @@ class MoviesController < ApplicationController
     render :search
   end
 end
+
+private
+
+#def poster_path
+  #configuration = Tmdb::Configuration.new
+  #configuration.base_url
+#  configuration.secure_base_url
+#  configuration.poster_sizes
+#  configuration.save
+#end

@@ -1,0 +1,77 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+nav {
+  border-radius: 12px;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: #333;
+
+ }
+
+nav li {
+  float: left;
+  color: #F0F8FF;
+  font-size: 20px;
+  font-family: jumbotron;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav li {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+
+nav li:hover {
+  background-color: #111;
+}
+
+span {
+  float: right;
+}
+
+span a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 4px 6px;
+    text-decoration: none;
+}
+
+span a:hover, .dropdown:hover .dropbtn {
+    background-color: #111;
+}
+
+span.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #111;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 4px 6px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #333}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

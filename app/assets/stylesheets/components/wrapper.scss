@@ -1,0 +1,50 @@
+
+body {
+    background-image: url("marvel.png");
+    margin: 0;
+    padding: 0;
+    align-items: center;
+
+}
+
+h1 {
+
+  font-family: jumbotron;
+  color: #9932CC;
+}
+
+.container input {
+  align-content: center;
+  font-family: jumbotron;
+  font-size: 18px;
+  color: #9932CC;
+  height: 28px;
+  width: 70%;
+  border-radius: 12px;
+  display: flex;
+  text-align: left;
+  margin: auto;
+
+}
+
+.container button {
+  align-content: center;
+}
+
+.container h1 {
+  display: flex;
+  align-self: center;
+}
+.card {
+    display: flex;
+    align-self: center;
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    border-radius: 12px;
+    width: 18rem;
+    margin: 5%;
+    padding: 4px 6px;
+}
